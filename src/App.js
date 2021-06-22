@@ -12,18 +12,18 @@ import AllPlants from './pages/allPlants/AllPlants';
 function App() {
   return (
     <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about-us">
-            <AboutUs />
-          </Route>
-          <Route path="/all-plants">
-            <AllPlants />
-          </Route>
-        </Switch>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about-us">
+          <AboutUs />
+        </Route>
+        <Route path="/all-plants">
+          <AllPlants />
+        </Route>
+      </Switch>
     </Router>
   );
 }

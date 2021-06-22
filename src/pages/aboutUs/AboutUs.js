@@ -1,14 +1,17 @@
 import React from 'react';
 import writers from '../../assets/bob_betsy.jpg';
-import content from '../../data/content.json';
+import {LangContext} from '../../context/LangContextProvider';
 
 function AboutUs() {
+
+  const {getText} = React.useContext(LangContext);
+
   return (
     <div className="page-container">
-      <h2>{content.nl.aboutUs.title}</h2>
+      <h2>{getText('aboutUs.title')}</h2>
       <p>Dit is je profielpagina!</p>
       <img src={writers} alt="Bob & Betsy"/>
-      <p>{content.nl.aboutUs.writers}</p>
+      <p>{getText('aboutUs.writers')}</p>
     </div>
   );
 }

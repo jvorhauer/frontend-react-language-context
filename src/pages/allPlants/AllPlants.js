@@ -1,13 +1,16 @@
 import React from 'react';
-import content from '../../data/content.json';
+import {LangContext} from '../../context/LangContextProvider';
 
 function AllPlants() {
+
+  const {getText, getNode} = React.useContext(LangContext);
+
   return (
     <div className="page-container">
-      <h2>{content.nl.plants.title}</h2>
-      <p>{content.nl.plants.text}</p>
+      <h2>{getText('plants.title')}</h2>
+      <p>{getText('plants.text')}</p>
       <ul>
-        {content.nl.plants.plants.map((plant) => <li>{plant}</li>)}
+        {getNode('plants').plants.map((plant) => <li>{plant}</li>)}
       </ul>
     </div>
   );
